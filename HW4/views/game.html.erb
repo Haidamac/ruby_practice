@@ -1,0 +1,50 @@
+<html>
+<%= render('_head.html.erb') %>
+<body class="text-center">
+    <div><img src="https://haidamac.com.ua/wp-content/uploads/2022/11/ice_age_t.png"></div>  
+    <div class="alert alert-info" role="alert"><strong> <%=pet.message%> </strong></div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+      <table class="table table-responsive">
+        <tr>
+          <th rowspan="8" class="text-center"><div class="display-4">Hi, I'm <%= pet.name %>!</div><br>
+            <div class="greeter"><img src="https://haidamac.com.ua/wp-content/uploads/2022/11/scrat.png"></div>
+        </th>
+          <td><p div class="h4">Life</p></td><td><p div class="h3"><%= pet.life_em %></p></td><td><form method="post" action="/exit">
+                <button type="submit" name="exit" class="btn btn-primary">Exit</button>
+          </form></td>
+        </tr>
+        <tr>
+          <td><p div class="h4">Health</p></td><td><p div class="h3"><%= pet.health_em %></p></td><td><form method="post" action="/give_cure">
+                <button type="submit" name="cure" class="btn btn-primary">Cure</button>
+          </form></td>
+        </tr>
+        <tr>
+          <td><p div class="h4">Mood</p></td><td><p div class="h3"><%= pet.mood_em %></p></td><td></td>
+        </tr>
+        <tr>
+          <td><p div class="h4">Satiety</p></td><td><p div class="h3"><%= pet.satiety_em %></p></td><td><form method="post" action="/give_food">
+                <button type="submit" name="feed" class="btn btn-primary">Feed</button>
+          </form></td>
+        </tr>
+        <tr>
+          <td><p div class="h4">Thirst</p></td><td><p div class="h3"><%= pet.thirst_em %></p></td><td><form method="post" action="/give_water">
+                <button type="submit" name="water" class="btn btn-primary">Water</button>
+          </form></td>
+        </tr>
+        <tr>
+          <td><p div class="h4">Weariness</p></td><td><p div class="h3"><%= pet.weariness_em %></p></td><td><form method="post" action="/put_cave">
+                <button type="submit" name="bed" class="btn btn-primary">Bed</button>
+          </form></td>
+        </tr>
+        <tr>
+          <td><p div class="h4">Irritability</p></td><td><p div class="h3"><%= pet.irritability_em %></p></td><td></td>
+        </tr>
+        <tr>
+          <td><p div class="h4">Acorn</p></td><td><p div class="h3"><%= pet.big_acorn_em %></p></td><td><form method="post" action="/give_acorn">
+                <button type="submit" name="acorn" class="btn btn-primary">Acorn</button>
+          </form></td>
+        </tr>
+      </table></div></div>
+</body>
+</html>

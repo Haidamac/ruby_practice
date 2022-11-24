@@ -1,0 +1,20 @@
+<html>
+  <%= render('_head.html.erb') %>
+  <body class="text-center">
+    <div><img src="https://haidamac.com.ua/wp-content/uploads/2022/11/ice_age_t.png"></div>
+    <br>
+    <% if pet.nil? %>
+      <div class="display-6">Hi I'm saber-toothed squirrel from "Ice Age". By the way, my name is Scrat, but you can call me whatever you want</div>
+      <br>
+      <form method="post" action="/create_pet">
+        <input name="name" type="text">
+        <button type="submit" class="btn btn-primary">Type name!</button>
+      </form>
+    <% else %>
+      <h1>You have already created a pet!</h1>
+      <a href="/game">Play with <%= pet.name %>!</a>
+    <% end %>
+    <br>
+    <div><img src="https://haidamac.com.ua/wp-content/uploads/2022/11/scrat_snow.jpg" width=50%></div>
+  </body>
+</html>
